@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+a {
+    color: #006400; /* dark green links */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    background-image: url('../images/header.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+nav {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    font-weight: bold;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.post-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+}
+.post-card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.post-card .content {
+    padding: 15px;
+}
+.post-card h3 {
+    margin-top: 0;
+}
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+article {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+article h2 {
+    color: #004d40;
+}
+blockquote {
+    font-style: italic;
+    background-color: #f0f0f0;
+    border-left: 4px solid #004d40;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+@media (max-width: 768px) {
+    .post-card {
+        flex: 1 1 100%;
+    }
+    header {
+        padding: 60px 20px;
+    }
+    header h1 {
+        font-size: 2.2em;
+    }
+}
