@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Add each URL of your site here -->
+  <url>
+    <loc>https://www.fairwaygearguide.com/</loc>
+  </url>
+  <!-- Example blog or section pages. Add more urls as needed -->
+  <url>
+    <loc>https://www.fairwaygearguide.com/gear-reviews/</loc>
+  </url>
+  <url>
+    <loc>https://www.fairwaygearguide.com/course-reviews/</loc>
+  </url>
+</urlset>
