@@ -1,0 +1,1 @@
+{"name":"fairway-gear-guide","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node scripts/validate.mjs"},"engines":{"node":">=22"}}
