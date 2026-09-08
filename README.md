@@ -27,3 +27,7 @@ Do not relabel 2025 research as a current-year review. Publish measured testing 
 ## Review / deployment
 
 The redesign is prepared on `redesign/editorial-revamp-2026`. Do not merge to `main` or alter hosting until the owner approves production deployment. Original assets are retained; unused large images are not requested by the redesigned pages.
+
+## Colfax Golf Arcade
+
+The standalone browser game lives in `games/colfax-golf/`. Its HTML, CSS and JavaScript are served directly by GitHub Pages; the shared build adds navigation and a sitemap entry without overwriting the game. Course sources and approximation notes are accessible within the game. Round progress is saved in device-local browser storage.
