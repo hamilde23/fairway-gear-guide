@@ -11,7 +11,7 @@ npm run build
 npm test
 ```
 
-- `content/`: original article bodies. Edit these, not generated `posts/` pages.
+- `_content/`: original article bodies (excluded from direct GitHub Pages publication). Edit these, not generated `posts/` pages.
 - `scripts/build.mjs`: article metadata, shared navigation/footer and page templates.
 - `css/style.css`: shared responsive editorial design.
 - `js/site.js`: progressive-enhancement mobile menu. Navigation remains usable without JavaScript.
@@ -19,6 +19,8 @@ npm test
 - Root HTML, category HTML, `posts/` and `sitemap.xml` are generated and committed so existing GitHub Pages hosting needs no new deployment setup.
 
 Preserve `CNAME`, existing article URLs and analytics ID `G-YPG4PGB0D3`. All internal links assume the existing custom domain root, not a GitHub project subdirectory. Rebuild and commit generated output after template/content edits.
+
+`content/` contains generated noindex redirects for historical source URLs. SEO priorities and measurement steps are in `SEO_STRATEGY.md`.
 
 ## Editorial safeguards
 
