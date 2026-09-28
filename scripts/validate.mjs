@@ -7,7 +7,7 @@ import { runInNewContext } from 'node:vm';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const pages=['index.html','about.html','404.html','gear-reviews/index.html','course-reviews/index.html',...readdirSync(resolve(root,'posts')).filter(p=>p.endsWith('.html')).map(p=>'posts/'+p)];
 const idsByFile=new Map();
-let links=0,affiliates=0;
+let links=0;
 for(const file of pages){
  const html=readFileSync(resolve(root,file),'utf8');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,`${file}: exactly one h1`);
@@ -16,7 +16,7 @@ for(const file of pages){
  assert.match(html,/<link rel="canonical" href="https:\/\/www.fairwaygearguide.com/);
  assert.match(html,/G-YPG4PGB0D3/);
  assert.match(html,/id="primary-nav"/);
- assert.match(html,/As an Amazon Associate I earn from qualifying purchases/);
+ assert.doesNotMatch(html,/affiliate|amazon\.com|amzn\.to|fairwaygeargu-20|qualifying purchases/i,`${file}: retired monetization content`);
  assert.doesNotMatch(html,/<artile|\n<\s*\n|[^<]\/(?:div|header)>/);
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(ids.length,new Set(ids).size,`${file}: duplicate IDs`);
@@ -25,9 +25,7 @@ for(const file of pages){
  for(const m of html.matchAll(/<img\b[^>]*>/g)){
    assert.match(m[0],/alt="[^"]*"/);assert.match(m[0],/width="\d+"/);assert.match(m[0],/height="\d+"/);
  }
- for(const m of html.matchAll(/<a\b[^>]*href="https:\/\/www.amazon.com[^>]*>/g)){
-   affiliates++;assert.match(m[0],/tag=fairwaygeargu-20/);assert.match(m[0],/rel="[^"]*sponsored/);assert.match(m[0],/noopener/);
- }
+
 }
 for(const file of pages){
  const html=readFileSync(resolve(root,file),'utf8');
@@ -57,5 +55,5 @@ assert.equal(toggle.hidden,false);events.click();assert.equal(expanded,'true');a
 docEvents.keydown({key:'Escape'});assert.equal(expanded,'false');assert.ok(focused);
 events.click();navEvents.click({target:{closest:()=>true}});assert.equal(expanded,'false');
 assert.equal(readFileSync(resolve(root,'CNAME'),'utf8').trim(),'www.fairwaygearguide.com');
-assert.equal(affiliates,19);
-console.log(`PASS: ${pages.length} pages; ${links} local links/assets; ${affiliates} affiliate links; unique IDs, metadata, schema, sitemap and menu behavior.`);
+
+console.log(`PASS: ${pages.length} pages; ${links} local links/assets; no affiliate links; unique IDs, metadata, schema, sitemap and menu behavior.`);

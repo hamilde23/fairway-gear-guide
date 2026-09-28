@@ -18,15 +18,15 @@ npm test
 - `scripts/validate.mjs`: page, link, anchor, metadata and menu checks.
 - Root HTML, category HTML, `posts/` and `sitemap.xml` are generated and committed so existing GitHub Pages hosting needs no new deployment setup.
 
-Preserve `CNAME`, existing article URLs, Amazon tag `fairwaygeargu-20`, and analytics ID `G-YPG4PGB0D3`. All internal links assume the existing custom domain root, not a GitHub project subdirectory. Rebuild and commit generated output after template/content edits.
+Preserve `CNAME`, existing article URLs and analytics ID `G-YPG4PGB0D3`. All internal links assume the existing custom domain root, not a GitHub project subdirectory. Rebuild and commit generated output after template/content edits.
 
 ## Editorial safeguards
 
-Do not relabel 2025 research as a current-year review. Publish measured testing claims only with real test notes. Old course prices and restaurant suggestions need fresh verification before removing archive notices. Amazon links currently lead to search results, not verified individual product listings.
+Do not relabel 2025 research as a current-year review. Publish measured testing claims only with real test notes. Old course prices and restaurant suggestions need fresh verification before removing archive notices. Do not add affiliate links. Identify product loans, gifts and paid partnerships in relevant future coverage; never invent hands-on testing results.
 
 ## Review / deployment
 
-The redesign is prepared on `redesign/editorial-revamp-2026`. Do not merge to `main` or alter hosting until the owner approves production deployment. Original assets are retained; unused large images are not requested by the redesigned pages.
+Production is served from `main`. The owner authorized publishing the September 28, 2026 editorial refresh. Original assets are retained; unused large images are not requested by the redesigned pages.
 
 ## Colfax Golf Arcade
 

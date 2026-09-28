@@ -549,7 +549,7 @@ p{
 .quick-take .eyebrow{
   margin-bottom:.5rem
 }
-.disclosure,.editor-note{
+.editor-note{
   font-size:.875rem;
   color:var(--muted);
   line-height:1.6
@@ -557,19 +557,6 @@ p{
 .editor-note{
   border-bottom:1px solid var(--line);
   padding-bottom:1.25rem
-}
-.affiliate-link{
-  display:table;
-  margin-top:1rem;
-  padding:.65rem 1rem;
-  border:1px solid var(--green);
-  font-size:.875rem;
-  font-weight:700;
-  text-decoration:none
-}
-.affiliate-link:hover{
-  background:var(--green);
-  color:white
 }
 .table-scroll{
   overflow:auto;
@@ -851,10 +838,6 @@ tbody tr:nth-child(even){
   }
   .article-image img{
     max-height:200px
-  }
-  .affiliate-link{
-    display:inline;
-    border:0
   }
   .article-body h2{
     break-after:avoid
